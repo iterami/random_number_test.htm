@@ -15,6 +15,7 @@ function repo_init(){
     });
 
     core_interval_modify({
+      'id': 'random_number_test',
       'interval': 1000,
       'todo': random_number_test,
     });
