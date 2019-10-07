@@ -4,13 +4,16 @@ function repo_init(){
     core_repo_init({
       'events': {
         'clear': {
-          'onclick': random_number_test_clear,
+          'onclick': core_repo_reset,
         },
       },
       'globals': {
         'random_number_test_element': document.getElementById('random_number_test'),
       },
       'info': '<input id=clear type=button value=Clear>',
+      'reset': function(){
+          random_number_test_element.value = '';
+      },
       'title': 'random_number_test.htm',
     });
 
