@@ -29,7 +29,7 @@ function repo_init(){
       'globals': {
         'random_number_test_element': document.getElementById('random_number_test'),
       },
-      'info': '<input id=clear type=button value=Clear>',
+      'info': '<button id=clear type=button>Clear</button>',
       'reset': function(){
           random_number_test_element.value = '';
       },
