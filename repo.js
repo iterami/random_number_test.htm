@@ -11,12 +11,8 @@ function random_number_test(){
 
     line += '\n';
 
-    random_number_test_element.value += line;
-    random_number_test_element.scrollTop = random_number_test_element.scrollHeight;
-}
-
-function random_number_test_clear(){
-    random_number_test_element.value = '';
+    core_elements['random_number_test'].value += line;
+    core_elements['random_number_test'].scrollTop = core_elements['random_number_test'].scrollHeight;
 }
 
 function repo_init(){
@@ -26,14 +22,14 @@ function repo_init(){
           'onclick': core_repo_reset,
         },
       },
-      'globals': {
-        'random_number_test_element': document.getElementById('random_number_test'),
-      },
       'info': '<button id=clear type=button>Clear</button>',
       'reset': function(){
-          random_number_test_element.value = '';
+          core_elements['random_number_test'].value = '';
       },
       'title': 'random_number_test.htm',
+      'ui-elements': [
+        'random_number_test',
+      ],
     });
 
     core_interval_modify({
