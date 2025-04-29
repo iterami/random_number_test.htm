@@ -19,13 +19,12 @@ function repo_init(){
     core_repo_init({
       'events': {
         'clear': {
-          'onclick': core_repo_reset,
+          'onclick': function(){
+              core_elements['random_number_test'].value = '';
+          },
         },
       },
       'info': '<button id=clear type=button>Clear</button>',
-      'reset': function(){
-          core_elements['random_number_test'].value = '';
-      },
       'title': 'random_number_test.htm',
       'ui-elements': [
         'random_number_test',
