@@ -31,6 +31,7 @@ function repo_init(){
       ],
     });
 
+    core_elements['random_number_test'].style.textWrap = 'nowrap';
     core_interval_modify({
       'id': 'random_number_test',
       'interval': 1000,
