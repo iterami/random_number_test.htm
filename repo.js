@@ -11,8 +11,8 @@ function random_number_test(){
 
     line += '\n';
 
-    core_elements['random_number_test'].value += line;
-    core_elements['random_number_test'].scrollTop = core_elements['random_number_test'].scrollHeight;
+    core_elements.textarea.value += line;
+    core_elements.textarea.scrollTop = core_elements.textarea.scrollHeight;
 }
 
 function repo_init(){
@@ -20,18 +20,18 @@ function repo_init(){
       'events': {
         'clear': {
           'onclick': function(){
-              core_elements['random_number_test'].value = '';
+              core_elements.textarea.value = '';
           },
         },
       },
       'info': '<button id=clear type=button>Clear</button>',
       'title': 'random_number_test.htm',
       'ui-elements': [
-        'random_number_test',
+        'textarea',
       ],
     });
 
-    core_elements['random_number_test'].style.textWrap = 'nowrap';
+    core_elements.textarea.style.textWrap = 'nowrap';
     core_interval_modify({
       'id': 'random_number_test',
       'interval': 1000,
