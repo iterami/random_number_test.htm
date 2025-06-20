@@ -24,7 +24,7 @@ function repo_init(){
       },
       'info': '<button id=clear type=button>Clear</button>',
       'title': 'random_number_test.htm',
-      'ui-elements': [
+      'ui_elements': [
         'textarea',
       ],
     });
